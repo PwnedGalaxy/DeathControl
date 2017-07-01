@@ -151,7 +151,7 @@ public class DeathControl extends JavaPlugin {
 		if (!force && file.exists())
 			return false;
 
-		InputStream in = getClass().getResourceAsStream(resourceName);
+		InputStream in = this.getResource(resourceName);
 		if (in == null) {
 			throw new ResourceNotFoundError(resourceName);
 		}
